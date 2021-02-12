@@ -140,10 +140,6 @@ export class TransformDataCorporativosService {
     return obj;
   }
 
-  /**
-   * Tranforma la fecha en formato de arreglo a un string
-   * {year: 2020, month: 09, day: 11} => "2020-09-11"
-   */
   private getFechaIncorporacionJSON(fechaInc: any): any {
     const year = fechaInc.year;
     let month = fechaInc.month;
@@ -160,9 +156,6 @@ export class TransformDataCorporativosService {
     return `${year}-${month}-${day}`;
   }
 
-  /**
-   * Tranforma la información para crear o actualizar un contacto
-   */
   getContacto(id: number, data: any): any {
     const contacto = {
       S_Nombre: this.capitalizar(data.nombre),
@@ -188,9 +181,6 @@ export class TransformDataCorporativosService {
     return nombres.join(" ");
   }
 
-  /**
-   * Tranforma el satus de tipo number al string correspondiente
-   */
   private getStatus(status: number): string {
     switch (status) {
       case 0:
